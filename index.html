@@ -12,23 +12,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
+    <div class="homepage-header-and-section">
+        <header>
             <h1 class="logo">Aireenezr.</h1>
+    
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Article</a></li>
+                    <li><a href="#">Play A Game</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section class="section1-homepage">
+            <h2 id="homepage-title">Digital Privacy</h2>
+            <a href="#" class="button-in-content" id="learn-more">Learn More</a>
+        </section>
+    </div>
 
-            <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Article</a></li>
-                <li><a href="#">Play A Game</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="homepage-description">
+        <h2>Website Introduction</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, quibusdam necessitatibus iusto in ea amet nisi temporibus, consectetur facilis nobis reiciendis? Molestiae temporibus accusantium maiores ut aliquam, ad recusandae mollitia!
+            <br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto obcaecati possimus laborum saepe blanditiis harum recusandae, error, quis rerum accusamus dolore nesciunt earum voluptas pariatur dignissimos quo reprehenderit placeat.
+            <br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto obcaecati possimus laborum saepe blanditiis harum recusandae, error, quis rerum accusamus dolore nesciunt earum voluptas pariatur dignissimos quo reprehenderit placeat.
+            <br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto obcaecati possimus laborum saepe blanditiis harum recusandae, error, quis rerum accusamus dolore nesciunt earum voluptas pariatur dignissimos quo reprehenderit placeat.
+            <br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto obcaecati possimus laborum saepe blanditiis harum recusandae, error, quis rerum accusamus dolore nesciunt earum voluptas pariatur dignissimos quo reprehenderit placeat.
+            <br><br>
+        </p>
+    </div>
 
-    <section>
-        <h2 id="homepage-title">Digital Privacy</h2>
-        <a href="#" class="section-button">Learn More</a>
-    </section>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>    
 </body>
 </html>

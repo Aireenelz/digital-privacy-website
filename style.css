@@ -8,22 +8,27 @@
 body {
     width: 100%;
     min-height: 100vh;
+}
+
+.homepage-header-and-section {
     background: url(images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 10px;
 }
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
+.header-scrolled {
+    background: linear-gradient(135deg, #614385, #516395);
+}
+
+header {
+    position: fixed;
     width: 100%;
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10000;
 }
 
 header .logo {
@@ -32,6 +37,13 @@ header .logo {
     text-decoration: none;
     font-size: 2em;
     letter-spacing: 1px;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; /* is the depth of the element *into* the screen, lower z-index means it's on the lower layer */
 }
 
 header ul {
@@ -43,7 +55,6 @@ header ul {
 header ul li {
     list-style: none;
     margin-left: 20px;
-    display: flex;
 }
 
 header ul li a {
@@ -51,14 +62,12 @@ header ul li a {
     padding: 6px 15px;
     color: #fff;
     border-radius: 20px;
-    z-index: 10;
 }
 
 header ul li a:hover,
 header ul li a.active {
     background: #fff;
     color: #2b1055;
-    z-index: 10; /* is the depth of the element *into* the screen, lower z-index means it's on the lower layer */
 }
 
 section {
@@ -79,7 +88,7 @@ section {
     z-index: 9;
 }
 
-.section-button {
+.button-in-content {
     text-decoration: none;
     display: inline-block;
     padding: 8px 30px;
