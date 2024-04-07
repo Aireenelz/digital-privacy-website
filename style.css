@@ -24,11 +24,11 @@ body {
 header {
     position: fixed;
     width: 100%;
-    padding: 30px 100px;
+    padding: 20px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10000;
+    z-index: 100;
 }
 
 header .logo {
@@ -70,7 +70,7 @@ header ul li a.active {
     color: #2b1055;
 }
 
-section {
+#landing-page {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -88,7 +88,7 @@ section {
     z-index: 9;
 }
 
-.button-in-content {
+.big-button {
     text-decoration: none;
     display: inline-block;
     padding: 8px 30px;
@@ -98,4 +98,59 @@ section {
     font-size: 1.5em;
     z-index: 9;
     transform: translateY(100px);
+}
+
+/* Homepage description */
+section {
+    padding: 80px;
+}
+
+.section-description-center {
+    text-align: center;
+}
+
+/* Feature intro */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section .card {
+    width: calc(100% / 3 - 30px);
+    height: 90vh;
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+    padding: 40px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+section .card img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.alternate-section {
+    background-color: #edebe8;
+}
+
+section .card p {
+    margin-top: 5px;
+    flex-grow: 1;
 }

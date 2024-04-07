@@ -6,12 +6,13 @@
     <title>Digital Privacy</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- google font -->
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Landing page -->
     <div class="homepage-header-and-section">
         <header>
             <h1 class="logo">Aireenezr.</h1>
@@ -21,32 +22,63 @@
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Article</a></li>
                     <li><a href="#">Play A Game</a></li>
-                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">About Us</a></li>
                     <li><a href="#">More</a></li>
                 </ul>
             </nav>
         </header>
     
-        <section class="section1-homepage">
+        <div id="landing-page">
             <h2 id="homepage-title">Digital Privacy</h2>
-            <a href="#" class="button-in-content" id="learn-more">Learn More</a>
-        </section>
+            <a href="#homepage-description" class="big-button" id="learn-more">Learn More</a>
+        </div>
     </div>
 
-    <div class="homepage-description">
-        <h2>Website Introduction</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, quibusdam necessitatibus iusto in ea amet nisi temporibus, consectetur facilis nobis reiciendis? Molestiae temporibus accusantium maiores ut aliquam, ad recusandae mollitia!
-            <br><br>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto obcaecati possimus laborum saepe blanditiis harum recusandae, error, quis rerum accusamus dolore nesciunt earum voluptas pariatur dignissimos quo reprehenderit placeat.
-            <br><br>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto obcaecati possimus laborum saepe blanditiis harum recusandae, error, quis rerum accusamus dolore nesciunt earum voluptas pariatur dignissimos quo reprehenderit placeat.
-            <br><br>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto obcaecati possimus laborum saepe blanditiis harum recusandae, error, quis rerum accusamus dolore nesciunt earum voluptas pariatur dignissimos quo reprehenderit placeat.
-            <br><br>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto obcaecati possimus laborum saepe blanditiis harum recusandae, error, quis rerum accusamus dolore nesciunt earum voluptas pariatur dignissimos quo reprehenderit placeat.
-            <br><br>
-        </p>
-    </div>
+    <!-- Homepage description -->
+    <section class="homepage-description", id="homepage-description">
+        <div class="container">
+            <div class="section-description-center">
+                <h2>About This Site</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit eius, animi accusantium reiciendis natus necessitatibus modi neque nobis harum dolores autem labore cumque. Labore, saepe? Ipsam ipsa vero hic.
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione id non deleniti, illum, facere molestiae quis tempore ipsum tenetur quo porro cumque amet suscipit perferendis laboriosam animi velit itaque esse!
+                    <br><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa sed earum, sequi ad alias, ab nemo quaerat tempora, explicabo ea delectus a. Cupiditate laborum ipsum dolor veritatis nam est recusandae.
+                    <br><br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat magnam, corrupti cupiditate, ipsum dolorum dolore odio assumenda tempore vitae vel optio quae ea dolorem consectetur ad consequatur blanditiis nesciunt corporis?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature overview -->
+    <section class="feature-overview alternate-section", id="feature-overview">
+        <div class="container">
+            <ul class="cards flex">
+                <li class="card">
+                    <img src="images/learn.png" alt="learnImage">
+                    <h2>Learn about Digital Privacy</h2>
+                    <p>Explore informative articles, tips, and best practices related to digital privacy, covering topics such as password security, data encryption, online tracking, and more. Gain insights into protecting your personal information and enhancing your online privacy.</p>
+                </li>
+                <li class="card">
+                    <img src="images/play.png" alt="playImage">
+                    <h2>Password Creation Game</h2>
+                    <p>Engage in an interactive and educational game designed to enhance your understanding of password security. Practice creating strong and unique passwords while learning about common pitfalls to avoid. Challenge yourself to improve your password hygiene and protect your online accounts effectively.</p>
+                </li>
+                <li class="card">
+                    <img src="images/learn.png" alt="additionalResourceImage">
+                    <h2>Explore Additional Resources</h2>
+                    <p>Access a curated selection of external links to reputable sources, articles, and guides related to digital privacy and cybersecurity. Dive deeper into specific topics, discover expert insights, and stay informed about the latest trends and developments in online privacy protection.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
 
     <script>
         window.addEventListener('scroll', function() {
