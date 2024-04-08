@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Kw/U5YH5Q5wz0d6PTzQUPsJ+DuNhZVJO0rmOzYkMq+AYOimtSxIEtHrfP0OwCvk5gjBx2w61FxoO8Q0ICzG14A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- Landing page -->
@@ -18,7 +21,14 @@
             <h1 class="logo">Aireenezr.</h1>
     
             <nav class="navbar">
-                <ul>
+                <!-- Hamburger menu for smaller screen -->
+                <input type="checkbox" id="menu-toggler"/>
+                <label for="menu-toggler" id="hamburger-button">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
+                <!-- Navigation links -->
+                <ul class="nav-links">
                     <li><a href="#landing-page" class="active">Home</a></li>
                     <li><a href="article.html">Article</a></li>
                     <li><a href="game.html">Play A Game</a></li>
@@ -84,6 +94,7 @@
         <p><a href="mailto:u2100667@siswa.um.edu.my">u2100667@siswa.um.edu.my</a></p>
     </footer>
 
+    <script src="https://kit.fontawesome.com/dd36547fc8.js" crossorigin="anonymous"></script>
     <script>
         window.addEventListener('scroll', function() {
             var header = document.querySelector('header');
@@ -93,6 +104,6 @@
                 header.classList.remove('header-scrolled');
             }
         });
-    </script>    
+    </script>
 </body>
 </html>
