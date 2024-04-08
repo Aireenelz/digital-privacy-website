@@ -103,7 +103,6 @@ header ul li a.active {
     font-size: 1.5em;
     z-index: 9;
     transform: translateY(100px);
-    transition: 1s;
 }
 
 .big-button:hover {
