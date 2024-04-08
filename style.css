@@ -40,7 +40,6 @@ header .logo {
     font-weight: 700;
     text-decoration: none;
     font-size: 2em;
-    letter-spacing: 1px;
 }
 
 header .navbar {
@@ -140,8 +139,9 @@ section {
 }
 
 .normal-button:hover {
-    color: #000;
-    background: #c7b4de;
+    color: #fff;
+    background: rgb(40, 26, 57);
+    border: 2px solid rgb(40, 26, 57);
 }
 
 /* Feature intro */
@@ -160,11 +160,11 @@ section .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: stretch; /* make all the cards to be the same height with each other */
 }
 
 section .card {
     width: calc(100% / 3 - 30px);
-    height: 90vh;
     text-align: center;
     list-style: none;
     background-color: #fff;
