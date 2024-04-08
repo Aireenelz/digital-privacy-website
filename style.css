@@ -271,4 +271,9 @@ section .card p {
         font-size: 22px;
         cursor: pointer;
     }
+
+    section .cards .card {
+        width: calc(100% - 15px);
+        margin: 10px;
+    }
 }
