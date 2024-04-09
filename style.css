@@ -50,7 +50,7 @@ header .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10; /* is the depth of the element *into* the screen, lower z-index means it's on the lower layer */
+    z-index: 10; /* is the depth of the element outward of the screen, lower z-index means it's on the lower layer */
 }
 
 header ul {
@@ -215,7 +215,108 @@ section .card p {
     display: none;
 }
 
-/* Responsiveness */
+/* Digital Privacy ----------------------------------------------------------------------------------*/
+.intro {
+    padding: 150px 80px 100px 80px;
+}
+
+#intro-digital-privacy {
+    background: url(images/intro-digital-privacy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: top;
+}
+
+#intro-digital-privacy h1 {
+    color: #fff;
+    font-size: 4vw;
+
+}
+
+#intro-digital-privacy p {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#table-of-contents-digital-privacy {
+    padding-top: 50px;
+}
+
+.collapsible {
+    max-width: 100%;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.collapsible label {
+    position: relative;
+    font-weight: 600;
+    font-size: 1.5em;
+    background: #fff;
+    color: rgb(40, 26, 57);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding: 15px 15px;
+    border: 1px solid #000;
+}
+
+.collapsible label::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+}
+
+.collapsible label i {
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.collapsible-text {
+    max-height: 0;
+    overflow: hidden;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-top: none;
+    margin-top: 0;
+    padding: 0 35px;
+}
+
+.collapsible input:checked ~ .collapsible-text {
+    max-height: 100%;
+}
+
+.collapsible input:checked ~ label i.fa-caret-down {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: all 0.3s ease;
+    padding-right: 15px;
+}
+
+.collapsible-text li {
+    padding: 5px 0;
+}
+
+.collapsible-text li a {
+    text-decoration: none;
+    color: #000;
+    padding-left: 15px;
+}
+
+#collapsible-head {
+    display: none;
+}
+
+/* Responsiveness ---------------------------------------------------------------------------------------------------- */
 @media (width < 1050px) {
     header {
         position: fixed;
@@ -225,6 +326,10 @@ section .card p {
         justify-content: space-between;
         align-items: center;
         z-index: 100;
+    }
+
+    section {
+        padding: 100px 30px;
     }
 
     header ul li {
@@ -279,46 +384,8 @@ section .card p {
         width: calc(100% - 15px);
         margin: 10px;
     }
-}
 
-/* Digital Privacy ----------------------------------------------------------------------------------*/
-.intro {
-    padding: 150px 80px 100px 80px;
-}
-
-#intro-digital-privacy {
-    background: url(images/intro-digital-privacy.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: top;
-}
-
-#intro-digital-privacy h1 {
-    color: #fff;
-}
-
-#intro-digital-privacy p {
-    margin-top: 30px;
-    color: #fff;
-}
-
-.collapsible {
-    max-width: 450px;
-    overflow: hidden;
-    font-weight: 500;
-}
-
-.collapsible label {
-    position: relative;
-    font-weight: 600;
-    font-size: 1em;
-    background: #fff;
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
-    color: rgb(40, 26, 57);
-    display: block;
-    margin-bottom: 10px;
-    cursor: pointer;
-    padding: 15px 0;
-    border-radius: 4px;
+    .intro {
+        padding: 150px 30px 100px 30px;
+    }
 }
