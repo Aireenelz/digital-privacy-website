@@ -216,6 +216,7 @@ section .card p {
 }
 
 /* Digital Privacy ----------------------------------------------------------------------------------*/
+/* Intro image and table of contents */
 .intro {
     padding: 150px 80px 100px 80px;
 }
@@ -314,6 +315,35 @@ section .card p {
 
 #collapsible-head {
     display: none;
+}
+
+/* Digital Privacy article */
+.digital-privacy-article h2 {
+    padding-bottom: 15px;
+    font-size: 2.5em;
+}
+
+.digital-privacy-article h3 {
+    font-size: 1.125em;
+}
+
+.digital-privacy-article p,
+.digital-privacy-article ul,
+.digital-privacy-article ol {
+    margin: 30px 0;
+    font-size: 1em;
+}
+
+.section-article {
+    margin-bottom: 50px;
+}
+
+.digital-privacy-article ul  {
+    padding-left: 30px;
+}
+
+.digital-privacy-article ol {
+    padding-left: 30px;
 }
 
 /* Responsiveness ---------------------------------------------------------------------------------------------------- */
