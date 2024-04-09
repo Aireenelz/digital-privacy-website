@@ -21,6 +21,10 @@ body {
     background-position: center;
 }
 
+.header-aside-homepage {
+    background: linear-gradient(135deg, #614385, #516395);
+}
+
 .header-scrolled {
     background: linear-gradient(135deg, #614385, #516395);
 }
@@ -112,7 +116,7 @@ header ul li a.active {
 
 /* Homepage description */
 section {
-    padding: 80px;
+    padding: 100px 80px;
 }
 
 .section-description-center {
@@ -212,11 +216,11 @@ section .card p {
 }
 
 /* Responsiveness */
-@media (width < 980px) {
+@media (width < 1050px) {
     header {
         position: fixed;
         width: 100%;
-        padding: 20px;
+        padding: 20px 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -275,4 +279,46 @@ section .card p {
         width: calc(100% - 15px);
         margin: 10px;
     }
+}
+
+/* Digital Privacy ----------------------------------------------------------------------------------*/
+.intro {
+    padding: 150px 80px 100px 80px;
+}
+
+#intro-digital-privacy {
+    background: url(images/intro-digital-privacy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: top;
+}
+
+#intro-digital-privacy h1 {
+    color: #fff;
+}
+
+#intro-digital-privacy p {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.collapsible {
+    max-width: 450px;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.collapsible label {
+    position: relative;
+    font-weight: 600;
+    font-size: 1em;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+    color: rgb(40, 26, 57);
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 4px;
 }
