@@ -109,7 +109,7 @@ function checkRule(password, rule) {
     return false;
 }
 
-// Function to play sound effects
+// Functions to play sound effects
 function playNextLevelSound() {
     const nextLevelSound = document.getElementById("next-level-sound");
     nextLevelSound.play();
