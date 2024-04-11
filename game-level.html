@@ -30,37 +30,50 @@
             <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="digital-privacy.html">Digital Privacy</a></li>
-                <li><a href="#play-a-game" class="active">Play A Game</a></li>
+                <li><a href="game.html" class="active">Play A Game</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="resource-hub.html">Resource Hub</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Play A Game -->
+    <!-- Game level -->
     <section class="game", id="play-a-game">
-        <div class="container">
-            <div class="game-description">
-                <h1>Welcome to our Password Creation Game!</h1>
-                <p>Are you ready to test your password-building skills and learn how to create strong and secure passwords?</p>
-                <p>In this interactive game, you'll be presented with various characteristics that make up a strong password. Your task is to construct a password based on these characteristics to ensure maximum security. Not only will this game be fun, but it will also help you better understand the importance of password security and how to create robust passwords that protect your online accounts.</p>
-                <p>Get ready to play and level up your password security knowledge!</p>
-            
-                <div class="game-button-container">
-                    <button class="game-button" id="start-game-button">Start</button>
-                </div>
+        <div class="container game-description">
+            <!-- Level instruction -->
+            <div class="level-details">
+                <p class="level-title">Level #<span id="current-level">1</span></p>
+                <p class="level-rules">Rules: </p>
+                <ul class="rules-list" id="rules-list">
+                    <!-- dummy data
+                    <li>password</li>
+                    <li>opensource</li>
+                    <li>hello world</li>-->
+                </ul>
             </div>
+
+            <!-- Input field -->
+            <label class="player-answer">Answer:
+                <input type="text" id="player-answer" required="required" placeholder="Enter your answer">
+            </label>
+
+            <!-- Submit button and reset level -->
+            <div class="game-button-container">
+                <button class="game-button" id="next-game-button">Next</button>
+            </div>
+
+            <div class="game-input-validation"><p id="game-input-validation">Please enter an input.</p></div>
         </div>
     </section>
-
-    <!-- Link to script -->
-    <script src="script-game.js"></script>
 
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 by Aireenezr.</p>
         <p><a href="mailto:u2100667@siswa.um.edu.my">u2100667@siswa.um.edu.my</a></p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="script-game.js"></script>
 
     <!-- Scrolling for header -->
     <script src="https://kit.fontawesome.com/dd36547fc8.js" crossorigin="anonymous"></script>
@@ -75,13 +88,19 @@
         });
     </script>
 
-    <!-- Start game -->
+    <!-- Load first level -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("start-game-button").addEventListener("click", function() {
-                window.location.href = "game-level.html?level=1"; // Redirect to game level page
-            });
-        });
+        // Function to parse query parameters from URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    
+        // Get the starting level from query parameter
+        const startingLevel = parseInt(getQueryParam('level'));
+    
+        // Load rules for the starting level
+        loadPasswordRules(startingLevel);
     </script>
 </body>
 </html>

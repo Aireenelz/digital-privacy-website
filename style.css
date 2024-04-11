@@ -455,7 +455,7 @@ section .card p {
     align-items: center;
 }
 
-#start-game-button {
+.game-button {
     margin-top: 15px;
     padding: 5px 30px;
     font-size: 1.2em;
@@ -467,7 +467,7 @@ section .card p {
     color: #40e0d0;
 }
 
-#start-game-button:hover {
+.game-button:hover {
     background-color: #40e0d0;
     color: #000;
 }
@@ -477,5 +477,34 @@ section .card p {
     justify-content: center;
     align-items: center;
     padding-bottom: 15px;
+}
+
+/* Game levels ------------------------------------------------------------------------------------------------------------------ */
+.player-answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.player-answer input {
+    padding: 0 5px;
+    margin: 0 10px;
+}
+
+.game-input-validation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.rules-list {
+    padding: 10px 30px 10px 30px;
+    background: rgb(128, 128, 128);
+}
+
+.rules-list li {
+    padding-bottom: 10px;
 }
 
