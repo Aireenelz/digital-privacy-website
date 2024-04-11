@@ -109,10 +109,15 @@ function checkRule(password, rule) {
     return false;
 }
 
-// Function to play sound effect when user go to next level in game
+// Function to play sound effects
 function playNextLevelSound() {
     const nextLevelSound = document.getElementById("next-level-sound");
     nextLevelSound.play();
+}
+
+function playWrongAnswerSound() {
+    const wrongAnswerSound = document.getElementById("wrong-answer-sound");
+    wrongAnswerSound.play();
 }
 
 
@@ -122,6 +127,7 @@ function handleNextButtonClick() {
     const validationMessage = document.getElementById("game-input-validation");
 
     if (inputPassword.trim() === "") {
+        playWrongAnswerSound();
         validationMessage.textContent = "Please enter an input";
     } else if (validatePassword(inputPassword)) {
         if (currentLevel === 5) {
@@ -150,6 +156,7 @@ function handleNextButtonClick() {
             document.getElementById("current-level").textContent = currentLevel;
         }
     } else {
+        playWrongAnswerSound();
         validationMessage.textContent = "Password hasn't satisfied the rules";
     }
 }
