@@ -492,6 +492,71 @@ section .card p {
 }
 
 /* Contact us */
+.contact-us {
+    padding: 80px;
+    justify-content: center;
+}
+
+.contact-us h2 {
+    margin-bottom: 20px;
+}
+
+.contact-details i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contact-details p {
+    padding: 5px;
+}
+
+.contact-details {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.feedback-form {
+    width: 70%;
+    margin: auto;
+}
+
+.feedback-form input{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border: 1px solid #bfbfbf;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+    border: 2px solid #000;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #bfbfbf;
+}
+
+.submit-feedback-button-container {
+    display: flex;
+    justify-content: right;
+}
+
+#submit-feedback-button {
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 
 
 /* Responsiveness ---------------------------------------------------------------------------------------------------- */
@@ -579,5 +644,9 @@ section .card p {
 
     .about-us-description {
         padding-top: 20px;
+    }
+
+    .feedback-form {
+        width: 100%;
     }
 }
