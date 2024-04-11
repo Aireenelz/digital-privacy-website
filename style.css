@@ -479,6 +479,10 @@ section .card p {
     padding-bottom: 15px;
 }
 
+#start-game-button:hover {
+    box-shadow: 0 0 10px #40e0d0, 0 0 40px #40e0d0, 0 0 80px #40e0d0; /* neon effect */ 
+}
+
 /* Game levels ------------------------------------------------------------------------------------------------------------------ */
 .player-answer {
     display: flex;
@@ -502,9 +506,9 @@ section .card p {
 .rules-list {
     padding: 10px 30px 10px 30px;
     background: rgb(128, 128, 128);
+    margin-bottom: 30px;
 }
 
 .rules-list li {
     padding-bottom: 10px;
 }
-

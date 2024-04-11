@@ -39,10 +39,10 @@
 
     <!-- Game level -->
     <section class="game", id="play-a-game">
-        <div class="container game-description">
+        <div class="container game-description game-level-box">
             <!-- Level instruction -->
             <div class="level-details">
-                <p class="level-title">Level #<span id="current-level">1</span></p>
+                <p class="level-title">Level <span id="current-level">1</span></p>
                 <p class="level-rules">Rules: </p>
                 <ul class="rules-list" id="rules-list">
                     <!-- dummy data
@@ -60,6 +60,7 @@
             <!-- Submit button and reset level -->
             <div class="game-button-container">
                 <button class="game-button" id="next-game-button">Next</button>
+
             </div>
 
             <div class="game-input-validation"><p id="game-input-validation">Please enter an input.</p></div>
@@ -72,7 +73,12 @@
         <p><a href="mailto:u2100667@siswa.um.edu.my">u2100667@siswa.um.edu.my</a></p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Audio element for button click sound -->
+    <audio id="next-level-sound">
+        <source src="sound/next-level.wav" type="audio/wav">
+    </audio>    
+
+    <!-- Script -->
     <script src="script-game.js"></script>
 
     <!-- Scrolling for header -->

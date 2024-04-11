@@ -109,10 +109,12 @@ function checkRule(password, rule) {
     return false;
 }
 
-// Event listener to go to next level
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("next-game-button").addEventListener("click", handleNextButtonClick);
-});
+// Function to play sound effect when user go to next level in game
+function playNextLevelSound() {
+    const nextLevelSound = document.getElementById("next-level-sound");
+    nextLevelSound.play();
+}
+
 
 // Handle click event on "Next" button
 function handleNextButtonClick() {
@@ -134,7 +136,8 @@ function handleNextButtonClick() {
             });
 
         } else {
-            validationMessage.textContent = "Password is good";
+            // Button click sound effect
+            playNextLevelSound();
 
             // Clear the player-answer field
             document.getElementById("player-answer").value = "";
@@ -150,3 +153,8 @@ function handleNextButtonClick() {
         validationMessage.textContent = "Password hasn't satisfied the rules";
     }
 }
+
+// Event listener to go to next level
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("next-game-button").addEventListener("click", handleNextButtonClick);
+});
