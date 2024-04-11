@@ -149,7 +149,7 @@ section {
 
 /* Feature intro */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
 }
@@ -215,7 +215,7 @@ section .card p {
     display: none;
 }
 
-/* Digital Privacy ----------------------------------------------------------------------------------*/
+/* Digital Privacy --------------------------------------------------------------------------------------------------------------------------*/
 /* Intro image and table of contents */
 .intro {
     padding: 150px 80px 100px 80px;
@@ -346,6 +346,154 @@ section .card p {
     padding-left: 30px;
 }
 
+/* Game start page ---------------------------------------------------------------------------------------------------------------- */
+.game {
+    background: url(images/game-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.game-description {
+    border: 2px solid white;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 5px 1px white;
+    color: #fff;
+    padding: 30px;
+    height: calc(100vh - 120px);
+    max-width: 700px;
+    margin: auto;
+}
+
+.game-description h1 {
+    padding-bottom: 10px;
+    font-size: 180%;
+}
+
+.game-description p {
+    padding-bottom: 10px;
+    font-size: 100%;
+}
+
+.game-description button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-button {
+    margin-top: 15px;
+    padding: 5px 30px;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    box-shadow: 0 0 1px 3px #40e0d0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #40e0d0;
+}
+
+.game-button:hover {
+    background-color: #40e0d0;
+    color: #000;
+}
+
+.game-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+#start-game-button:hover {
+    box-shadow: 0 0 10px #40e0d0, 0 0 40px #40e0d0, 0 0 80px #40e0d0; /* neon effect */ 
+}
+
+/* Game levels page ------------------------------------------------------------------------------------------------------------------ */
+.player-answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.player-answer input {
+    padding: 0 5px;
+    margin: 0 10px;
+}
+
+.game-input-validation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.rules-list {
+    padding: 10px 30px 10px 30px;
+    background: rgb(128, 128, 128);
+    margin-bottom: 30px;
+}
+
+.rules-list li {
+    padding-bottom: 10px;
+}
+
+/* About us page ----------------------------------------------------------------------------------------------------------- */
+.about-us {
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.about-us-title {
+    font-size: 2em;
+    text-align: center;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.about-us-image {
+    max-width: calc(100% - 60%);
+    display: flex;
+    align-items: center;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-us-description {
+    padding: 60px 30px 40px 30px;
+    margin: 0;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-us-description h1 {
+    padding: 15px 0;
+    margin: 0;
+}
+
+.about-us-description h2 {
+    padding: 15px 0;
+    margin: 0;
+}
+
+/* Contact us */
+
+
 /* Responsiveness ---------------------------------------------------------------------------------------------------- */
 @media (width < 1050px) {
     header {
@@ -418,97 +566,18 @@ section .card p {
     .intro {
         padding: 150px 30px 100px 30px;
     }
-}
 
-/* Game page ---------------------------------------------------------------------------------------------------------------- */
-.game {
-    background: url(images/game-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    .mission-vision {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.game-description {
-    border: 2px solid white;
-    background: rgba(0, 0, 0, 0.9);
-    box-shadow: 0 0 5px 1px white;
-    color: #fff;
-    padding: 30px;
-    height: calc(100vh - 120px);
-    max-width: 700px;
-    margin: auto;
-}
+    .about-us-image {
+        max-width: 100%;
+    }
 
-.game-description h1 {
-    padding-bottom: 10px;
-    font-size: 180%;
-}
-
-.game-description p {
-    padding-bottom: 10px;
-    font-size: 100%;
-}
-
-.game-description button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.game-button {
-    margin-top: 15px;
-    padding: 5px 30px;
-    font-size: 1.2em;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    box-shadow: 0 0 1px 3px #40e0d0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    color: #40e0d0;
-}
-
-.game-button:hover {
-    background-color: #40e0d0;
-    color: #000;
-}
-
-.game-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 15px;
-}
-
-#start-game-button:hover {
-    box-shadow: 0 0 10px #40e0d0, 0 0 40px #40e0d0, 0 0 80px #40e0d0; /* neon effect */ 
-}
-
-/* Game levels ------------------------------------------------------------------------------------------------------------------ */
-.player-answer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px auto;
-}
-
-.player-answer input {
-    padding: 0 5px;
-    margin: 0 10px;
-}
-
-.game-input-validation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.rules-list {
-    padding: 10px 30px 10px 30px;
-    background: rgb(128, 128, 128);
-    margin-bottom: 30px;
-}
-
-.rules-list li {
-    padding-bottom: 10px;
+    .about-us-description {
+        padding-top: 20px;
+    }
 }
