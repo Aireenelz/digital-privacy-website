@@ -106,8 +106,13 @@ function checkRule(password, rule) {
         return password.toLowerCase().includes("lebronjames");
     }
     
-    return false; // Return true if rule is not recognized
+    return false;
 }
+
+// Event listener to go to next level
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("next-game-button").addEventListener("click", handleNextButtonClick);
+});
 
 // Handle click event on "Next" button
 function handleNextButtonClick() {
@@ -145,8 +150,3 @@ function handleNextButtonClick() {
         validationMessage.textContent = "Password hasn't satisfied the rules";
     }
 }
-
-// Event listener to go to next level
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("next-game-button").addEventListener("click", handleNextButtonClick);
-});
