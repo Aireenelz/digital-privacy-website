@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Privacy</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Kw/U5YH5Q5wz0d6PTzQUPsJ+DuNhZVJO0rmOzYkMq+AYOimtSxIEtHrfP0OwCvk5gjBx2w61FxoO8Q0ICzG14A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-aside-homepage">
+        <h1 class="logo">Aireenezr.</h1>
+
+        <nav class="navbar">
+            <!-- Hamburger menu for smaller screen -->
+            <input type="checkbox" id="menu-toggler"/>
+            <label for="menu-toggler" id="hamburger-button">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <!-- Navigation links -->
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="digital-privacy.html">Digital Privacy</a></li>
+                <li><a href="game.html">Play A Game</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#news-section" class="active">Resource Hub</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- News -->
+    <section class="news-section", id="news-section">
+        <div class="container">
+            <div class="news-header" id="news-header">
+                <!-- Header -->
+                <h2>News related to Technology</h2>
+                
+                <!-- Search bar -->
+                <form class="search-bar">
+                    <input id="news-query" type="text" placeholder="Search News">
+                    <button id="search-news-button" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- News -->
+            <div class="container news-content">
+                <ul class="cards flex">
+                    <li class="card">
+                        <img id="news-thumbnail" src="images/learn.png" alt="learnImage">
+                        <h2 id="news-title">Learn about Digital Privacy</h2>
+                        <p id="news-excerpt">Explore the fundamental concepts and importance of digital privacy in today's interconnected world. Learn about the threats to digital privacy, such as data breaches, phishing attacks, and identity theft, and discover strategies to protect yourself online.</p>
+                        <a id="news-link" href="digital-privacy.html" class="normal-button">Read More</a>
+                    </li>
+                    <li class="card">
+                        <img id="news-thumbnail" src="images/learn.png" alt="learnImage">
+                        <h2 id="news-title">Learn about Digital Privacy</h2>
+                        <p id="news-excerpt">Explore the fundamental concepts and importance of digital privacy in today's interconnected world. Learn about the threats to digital privacy, such as data breaches, phishing attacks, and identity theft, and discover strategies to protect yourself online.</p>
+                        <a id="news-link" href="digital-privacy.html" class="normal-button">Read More</a>
+                    </li>
+                    <li class="card">
+                        <img id="news-thumbnail" src="images/learn.png" alt="learnImage">
+                        <h2 id="news-title">Learn about Digital Privacy</h2>
+                        <p id="news-excerpt">Explore the fundamental concepts and importance of digital privacy in today's interconnected world. Learn about the threats to digital privacy, such as data breaches, phishing attacks, and identity theft, and discover strategies to protect yourself online.</p>
+                        <a id="news-link" href="digital-privacy.html" class="normal-button">Read More</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 by Aireenezr.</p>
+        <p><a href="mailto:u2100667@siswa.um.edu.my">u2100667@siswa.um.edu.my</a></p>
+    </footer>
+
+    <!-- Script -->
+    <script src="scripts/script-news.js"></script>
+
+    <!-- Scrolling for header -->
+    <script src="https://kit.fontawesome.com/dd36547fc8.js" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

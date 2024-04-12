@@ -176,6 +176,7 @@ section .card {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 section .card img {
@@ -557,6 +558,40 @@ section .card p {
     padding-right: 15px;
 }
 
+/* Resource hub ------------------------------------------------------------------------------------------------------ */
+.news-header h2 {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 2em;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+}
+
+.search-bar button {
+    padding: 10px;
+}
+
+.news-content {
+    padding-top: 30px;
+}
+
+#news-title {
+    justify-content: left;
+}
+
 
 
 /* Responsiveness ---------------------------------------------------------------------------------------------------- */
@@ -648,5 +683,11 @@ section .card p {
 
     .feedback-form {
         width: 100%;
+    }
+
+    .news-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
