@@ -8,13 +8,15 @@ var newsDataArr = [];
 
 // API
 const API_KEY = "";
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=25&apiKey=";
+const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=my&category=technology&pageSize=25&apiKey=";
 const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
 
+// Get technology news when resource page is loaded
 window.onload = function() {
     fetchTechnologyNews();
 };
 
+// Fetch technology news
 const fetchTechnologyNews = async () => {
     const response = await fetch(TECHNOLOGY_NEWS + API_KEY);
     newsDataArr = [];
@@ -50,6 +52,7 @@ const fetchQueryNews = async() => {
     displayNews();
 }
 
+// Display the news that has been fetched
 function displayNews() {
     const newsContent = document.querySelector('.news-content .cards');
     newsContent.innerHTML = '';
