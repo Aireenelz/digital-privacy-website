@@ -8,7 +8,7 @@ var newsDataArr = [];
 
 // API
 const API_KEY = "";
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=my&category=technology&pageSize=25&apiKey=";
+const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=24&apiKey=";
 const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
 
 // Get technology news when resource page is loaded
