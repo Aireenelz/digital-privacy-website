@@ -7,9 +7,22 @@ const newsdetails = document.getElementById("news-exceprt");
 var newsDataArr = [];
 
 // API
-const API_KEY = "";
+let API_KEY = localStorage.getItem('API_KEY');
 const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=24&apiKey=";
 const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
+
+// Fetch API keys from localStorage or config.json
+if (!API_KEY) {
+    fetch('config.json')
+        .then(response => response.json())
+        .then(config => {
+            API_KEY = config.newsApiKey;
+            localStorage.setItem('API_KEY', API_KEY);  // Store in browser localStorage
+        })
+        .catch(error => {
+            console.error('Error fetching API keys:', error);
+        });
+}
 
 // Get technology news when resource page is loaded
 window.onload = function() {
