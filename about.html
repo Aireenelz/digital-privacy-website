@@ -70,10 +70,13 @@
         </div>
 
         <div class="feedback-form">
-            <form action="#">
-                <input type="text" placeholder="Name*" required/>
-                <input type="email" placeholder="Email*" required/>
-                <textarea placeholder="Leave us a message" required></textarea>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                
+                <!-- Input fields -->
+                <input type="text" name="name" placeholder="Name*" required/>
+                <input type="email" name="email" placeholder="Email*" required/>
+                <textarea name="message" placeholder="Leave us a message" required></textarea>
                 <br>
                 
                 <!-- Submit feedback -->
@@ -89,6 +92,9 @@
         <p>&copy; 2024 by Aireenezr.</p>
         <p><a href="mailto:u2100667@siswa.um.edu.my">u2100667@siswa.um.edu.my</a></p>
     </footer>
+
+    <!-- Script -->
+    <script src="scripts/script-feedback-form.js"></script>
 
     <!-- Scrolling for header -->
     <script src="https://kit.fontawesome.com/dd36547fc8.js" crossorigin="anonymous"></script>
