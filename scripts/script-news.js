@@ -9,7 +9,6 @@ var newsDataArr = [];
 // API
 let API_KEY = localStorage.getItem('API_KEY');
 const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=24&apiKey=";
-const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
 
 // Fetch API keys from localStorage or config.json
 if (!API_KEY) {
@@ -44,26 +43,6 @@ const fetchTechnologyNews = async () => {
 
     displayNews();
 };
-
-const fetchQueryNews = async() => {
-    if(newsQuery.value == null) {
-        return;
-    }
-    
-    const response = await fetch(SEARCH_NEWS + encodeURIComponent(newsQuery.value) + "&apiKey=" + API_KEY);
-    newsDataArr = [];
-
-    if(response.status >= 200 && response.status < 300) {
-        const myJson = await response.json();
-        console.log(myJson);
-        newsDataArr = myJson.articles;
-    } else {
-        // Handle errors
-        console.log(response.status, response.statusText);
-    }
-
-    displayNews();
-}
 
 // Display the news that has been fetched
 function displayNews() {
