@@ -34,6 +34,7 @@ const fetchTechnologyNews = async () => {
     newsDataArr = [];
     if(response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
+        console.log(myJson);
         newsDataArr = myJson.articles;
     } else {
         // Handle errors
