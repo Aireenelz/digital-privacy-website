@@ -593,6 +593,43 @@ section .card p {
 }
 
 /* Chatbot -------------------------------------------------------------------------------------------------------------------*/
+.chatbot-toggler {
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+    height: 60px;
+    width: 60px;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    background: linear-gradient(135deg, #614385, #516395);
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-toggler:hover {
+    box-shadow: 0 0 10px #40e0d0, 0 0 40px #40e0d0, 0 0 80px #40e0d0;
+}
+
+.chatbot-toggler span {
+    position: absolute;
+    font-size: 24px;
+}
+
+.show-chatbot .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child {
+    opacity: 0;
+}
+
+.show-chatbot .chatbot-toggler span:last-child {
+    opacity: 1;
+}
+
 .chatbot {
     position: fixed;
     right: 40px;
@@ -602,6 +639,16 @@ section .card p {
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 200;
+    transform: scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Open chatbot feature when chatbot-toggler is checked */
+.show-chatbot .chatbot {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .chatbot h2 {
@@ -679,38 +726,6 @@ section .card p {
 .chat-input .send-btn:hover {
     color: #516395;
     cursor: pointer;
-}
-
-.chatbot-toggler {
-    position: fixed;
-    right: 40px;
-    bottom: 50px;
-    height: 60px;
-    width: 60px;
-    color: #fff;
-    border: 1px solid #fff;
-    outline: none;
-    background: linear-gradient(135deg, #614385, #516395);
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 200;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.chatbot-toggler:hover {
-    box-shadow: 0 0 10px #40e0d0, 0 0 40px #40e0d0, 0 0 80px #40e0d0;
-}
-
-.chatbot-toggler span {
-    position: absolute;
-    font-size: 24px;
-}
-
-.chatbot-toggler span:last-child {
-    opacity: 0;
 }
 
 /* Responsiveness ---------------------------------------------------------------------------------------------------- */
@@ -808,5 +823,14 @@ section .card p {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media(max-width: 490px) {
+    .chatbot {
+        position: fixed;
+        right: 0;
+        bottom: 120px;
+        width: 100%;
     }
 }

@@ -61,34 +61,36 @@
     </section>
 
     <!-- Chatbot -->
-    <button class="chatbot-toggler">
-        <span><i class="fa-solid fa-robot"></i></span>
-        <span><i class="fa-solid fa-circle-xmark"></i></span>
-    </button>
-
-    <div class="chatbot">
-        <!-- Title -->
-        <h2>Chatbot</h2>
-
-        <!-- Chat conversation -->
-        <ul class="chatbox">
-            <li class="chat incoming">
-                <span><i class="fa-solid fa-robot"></i></span>
-                <p>
-                    Hi there 😊
-                    <br>
-                    How can I help you today?
-                </p>
-            </li>
-            <li class="chat outgoing">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </li>
-        </ul>
-
-        <!-- Chat input field -->
-        <div class="chat-input">
-            <textarea id="input-field" placeholder="Enter a message"></textarea>
-            <span class="send-btn" id="send-btn"><i class="fa-regular fa-paper-plane"></i></span>
+    <div class="show-chatbot">
+        <button class="chatbot-toggler">
+            <span><i class="fa-solid fa-robot"></i></span>
+            <span><i class="fa-solid fa-xmark"></i></span>
+        </button>
+    
+        <div class="chatbot">
+            <!-- Title -->
+            <h2>Chatbot</h2>
+    
+            <!-- Chat conversation -->
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span><i class="fa-solid fa-robot"></i></span>
+                    <p>
+                        Hi there 😊
+                        <br>
+                        How can I help you today?
+                    </p>
+                </li>
+                <!--<li class="chat outgoing">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </li>-->
+            </ul>
+    
+            <!-- Chat input field -->
+            <div class="chat-input">
+                <textarea id="input-field" placeholder="Enter a message" required></textarea>
+                <span class="send-btn" id="send-btn"><i class="fa-regular fa-paper-plane"></i></span>
+            </div>
         </div>
     </div>
 
@@ -123,6 +125,9 @@
         <p>&copy; 2024 by Aireenezr.</p>
         <p><a href="mailto:u2100667@siswa.um.edu.my">u2100667@siswa.um.edu.my</a></p>
     </footer>
+
+    <!-- Script -->
+    <script src="scripts/script-chatbot.js"></script>
 
     <script src="https://kit.fontawesome.com/dd36547fc8.js" crossorigin="anonymous"></script>
     <script>
