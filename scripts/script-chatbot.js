@@ -5,15 +5,14 @@ const chatbox = document.querySelector(".chatbox");
 let userMessage;
 
 // API key
-let API_KEY_CHATBOT = localStorage.getItem('API_KEY_CHATBOT');
+let API_KEY_CHATBOT = "";
 
-// Fetch API keys from localStorage or config.json
+// Fetch API keys from config.json
 if (!API_KEY_CHATBOT) {
     fetch('config.json')
         .then(response => response.json())
         .then(config => {
             API_KEY_CHATBOT = config.chatbotApiKey;
-            localStorage.setItem('API_KEY_CHATBOT', API_KEY_CHATBOT);  // Store in browser localStorage
         })
         .catch(error => {
             console.error('Error fetching API keys:', error);
@@ -29,8 +28,9 @@ const createChatLi = (message, className) => {
     return chatLi;
 }
 
-const generateResponse = () => {
+const generateResponse = (incomingChatLi) => {
     const API_URL = "https://api.openai.com/v1/chat/completions";
+    const messageElement = incomingChatLi.querySelector("p");
 
     const requestOptions = {
         method: "POST",
@@ -46,12 +46,19 @@ const generateResponse = () => {
 
     // Send POST request to API, and get response
     fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
+        // Log the json data from api in console for debugging purpose
         console.log(data);
+
+        // Display the bot response as incoming message
+        messageElement.textContent = data.choices[0].message.content;
+
     }).catch((error) => {
         console.log(error);
+        messageElement.textContent = "Oops! Something went wrong. Please try again.";
     })
 }
 
+// Handle when user send a message in the chatbot feature
 const handleChat = () => {
     userMessage = chatInput.value.trim();
     console.log(userMessage);
@@ -67,11 +74,13 @@ const handleChat = () => {
     // Response
     setTimeout(() => {
         // Display loading message while response is being generated
-        chatbox.appendChild(createChatLi("Typing...", "incoming"));
+        const incomingChatLi = createChatLi("Typing...", "incoming")
+        chatbox.appendChild(incomingChatLi);
 
-        // Call method to generate response
-        generateResponse();
+        // Call method to generate response based on user input and display the response as incoming message from the bot
+        generateResponse(incomingChatLi);
     }, 600);
 }
 
+// Event listener for chatbot send button
 sendChatBtn.addEventListener("click", handleChat);
