@@ -1,8 +1,10 @@
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
+const chatbotToggler = document.querySelector(".chatbot-toggler");
 
 let userMessage;
+const inputInitHeight = chatInput.scrollHeight;
 
 // API key
 let API_KEY_CHATBOT = "";
@@ -86,6 +88,15 @@ const handleChat = () => {
         generateResponse(incomingChatLi);
     }, 600);
 }
+
+// Adjust input field height based on content size
+chatInput.addEventListener("input", () => {
+    chatInput.style.height = `${inputInitHeight}px`;
+    chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+// Event listener to toggle out/in ui of chatbot feature
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 
 // Event listener for chatbot send button
 sendChatBtn.addEventListener("click", handleChat);
