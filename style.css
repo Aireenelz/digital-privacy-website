@@ -663,7 +663,7 @@ section .card p {
 .chatbot .chatbox {
     height: 400px;
     overflow-y: auto; /* enable vertical scroll if conversation messages need more than height*/
-    padding: 15px 20px 70px;
+    padding: 15px 20px 80px;
 }
 
 .chatbot .chat {
@@ -671,9 +671,10 @@ section .card p {
     margin-bottom: 15px;
 }
 
-.chatbot .chat p {
+.chatbox .chat p {
     max-width: 75%;
     color: #fff;
+    white-space: pre-wrap;
     font-size: 0.95rem;
     padding: 12px 16px;
     border-radius: 10px 10px 0 10px;

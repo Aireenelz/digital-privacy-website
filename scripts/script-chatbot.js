@@ -23,8 +23,9 @@ if (!API_KEY_CHATBOT) {
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", className);
-    let chatContent = className === "outgoing" ? `<p>${message}</p>` : `<span><i class="fa-solid fa-robot"></i></span><p>${message}</p>`
+    let chatContent = className === "outgoing" ? `<p></p>` : `<span><i class="fa-solid fa-robot"></i></span><p></p>`
     chatLi.innerHTML = chatContent;
+    chatLi.querySelector("p").textContent = message;
     return chatLi;
 }
 
@@ -55,7 +56,8 @@ const generateResponse = (incomingChatLi) => {
     }).catch((error) => {
         console.log(error);
         messageElement.textContent = "Oops! Something went wrong. Please try again.";
-    })
+    
+    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 }
 
 // Handle when user send a message in the chatbot feature
@@ -68,6 +70,8 @@ const handleChat = () => {
 
     // Append user message to chatbox
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    
     // Clear the textarea after sending the message
     chatInput.value = '';
 
@@ -76,6 +80,7 @@ const handleChat = () => {
         // Display loading message while response is being generated
         const incomingChatLi = createChatLi("Typing...", "incoming")
         chatbox.appendChild(incomingChatLi);
+        chatbox.scrollTo(0, chatbox.scrollHeight);
 
         // Call method to generate response based on user input and display the response as incoming message from the bot
         generateResponse(incomingChatLi);
