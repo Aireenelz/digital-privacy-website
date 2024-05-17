@@ -59,7 +59,7 @@ const generateResponse = (incomingChatLi) => {
         console.log(error);
         messageElement.textContent = "Oops! Something went wrong. Please try again.";
     
-    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+    });
 }
 
 // Handle when user send a message in the chatbot feature
